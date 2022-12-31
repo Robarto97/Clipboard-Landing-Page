@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+$strongCyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+$darkGrayishBlue: hsl(210, 10%, 33%);
+$grayishBlue: hsl(201, 11%, 66%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+  margin-top: 2em;
+  button {
+    border: none;
+    font-family: inherit;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 2em;
+    color: white;
+  }
+  .green {
+    background-color: $strongCyan;
+    box-shadow: 0 1px hsl(171, 66%, 35%), 0 2px hsl(171, 66%, 35%),
+      0 3px hsl(171, 66%, 35%);
+  }
+  .blue {
+    background-color: $lightBlue;
+    box-shadow: 0 1px hsl(233, 100%, 60%), 0 2px hsl(233, 100%, 60%),
+      0 3px hsl(233, 100%, 60%);
+  }
+}
+header {
+  background-image: url(images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 7em 1.75em 10em;
+  gap: 1em;
+  .logo {
+    margin-bottom: 2em;
+    width: 40%;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  h1 {
+    font-size: 2em;
+    color: $darkGrayishBlue;
+  }
+  p {
+    color: $grayishBlue;
+    font-size: 1.05em;
+    line-height: 1.4;
+  }
+}
+
+main {
+  padding: 0 1.75em 1.75em;
+  h2 {
+    color: $darkGrayishBlue;
+    font-size: 1.75em;
+  }
+  p {
+    color: $grayishBlue;
+    line-height: 1.4;
+    font-size: 1.05em;
+  }
+  .img-wrapper {
+    margin: 2.5em 0;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  h3 {
+    font-size: 1.5em;
+    color: $darkGrayishBlue;
+  }
+  .snippets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25em;
+    padding-bottom: 10em;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+    }
+  }
+  .access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25em;
+  }
+  .supercharge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    padding: 4em 0;
+    ul {
+      margin-top: 4em;
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        img {
+          width: 15%;
+          margin: 0 auto 1em;
+        }
+      }
+      .logo {
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .clipboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    margin-top: 4em;
+    margin-bottom: 8em;
+  }
+}
+
+footer {
+  background-color: hsl(0, 0%, 96%);
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5em;
+  .logo {
+    width: 20%;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    li {
+      a {
+        color: $darkGrayishBlue;
+        text-decoration: none;
+      }
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 2.25em;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+    button {
+      padding: 1em 2em;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.7;
+    }
+  }
+  header {
+    background-image: url(images/bg-header-desktop.png);
+    .logo {
+      width: 10%;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    p {
+      padding: 0 25%;
+      font-size: 1.15em;
+    }
+  }
+  main{
+    .snippets{
+        padding-bottom: 6em;
+        h2{
+            font-size: 2em;
+        }
+       > p{
+            padding: 0 25%;
+        }
+        div{
+            display: flex;
+            align-items: flex-start;
+            margin-top: 3em;
+            text-align: left;
+            .img-wrapper{
+                transform: translateX(-4em);
+                width: 55%;
+                margin-top: unset;
+            }
+            ul{
+                transform: translateX(4em);
+                width: 30%;
+                padding-right: 1em;
+                margin-top: 3em;
+                gap: 3.75em;
+                li{
+                    gap: .5em;
+                    p{
+                        line-height: 1.7;
+                    }
+                }
+            }
+        }
+    }
+    .access{
+        h2{
+            font-size: 2em;
+        }
+        > p{
+            padding: 0 25%;
+        }
+    }
+    .supercharge{
+        padding: 2em 10%;
+
+        h2{
+            font-size: 2em;
+        }
+        ul{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            li{
+                width: 35%;
+                img{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                }
+                p{
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+  }
+}
